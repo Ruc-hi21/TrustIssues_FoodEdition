@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "TrustIssues",
+    "slug": "trustissues",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo.png",
+    "scheme": "trustissues",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/images/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0a"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "TrustIssues needs camera access to scan ingredient labels and barcodes."
+      }
+    },
+    "android": {
+      "permissions": ["CAMERA"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo.png",
+        "backgroundColor": "#0a0a0a"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-camera",
+        { "cameraPermission": "Allow TrustIssues to use your camera to scan labels." }
+      ]
+    ],
+    "experiments": { "typedRoutes": false }
+  }
+}
